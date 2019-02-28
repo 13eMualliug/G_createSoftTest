@@ -1,75 +1,68 @@
 {
-    "name": "SpotDetection-IcyTEST22",
+    "command-line": "[CYTOMINE_HOST] [CYTOMINE_PUBLIC_KEY] [CYTOMINE_PRIVATE_KEY] [CYTOMINE_ID_PROJECT] [CYTOMINE_ID_SOFTWARE] [ICY_SCALE3SENSITIVITY]",
     "container-image": {
-        "image": "urubens/w_spotdetection-icy",
+        "image": "gmichiels/w_spotdetection-icy",
+        "index": "docker",
         "type": "singularity"
     },
-    "ram-needed":{
-    "numberInMB":500
-    },
-    "schema-version": "cytomine-0.1",
-    "description": "Neubias-WG5",
-    "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE ICY_SCALE3SENSITIVITY",
+    "default-processing-server-name": "local-container",
+    "description": "SpotDetection-Icy",
     "inputs": [
         {
-            "id": "cytomine_host",
-            "value-key": "@ID",
-            "command-line-flag": "--@id",
-            "name": "Cytomine host",
-            "description": "Cytomine server hostname",
-            "type": "String",
+            "id": "cytomine_id_software",
+            "name": "cytomine_id_software",
             "optional": false,
-            "set-by-server": true
-        },
-        {
-            "id": "cytomine_public_key",
-            "value-key": "@ID",
-            "command-line-flag": "--@id",
-            "name": "Cytomine public key",
-            "description": "Cytomine public key",
-            "type": "String",
-            "optional": false,
-            "set-by-server": true
-        },
-        {
-            "id": "cytomine_private_key",
-            "value-key": "@ID",
-            "command-line-flag": "--@id",
-            "name": "Cytomine private key",
-            "description": "Cytomine private key",
-            "type": "String",
-            "optional": false,
-            "set-by-server": true
+            "set-by-server": true,
+            "type": "number",
+            "value-key": "[CYTOMINE_ID_SOFTWARE]"
         },
         {
             "id": "cytomine_id_project",
-            "value-key": "@ID",
-            "command-line-flag": "--@id",
-            "name": "Cytomine project id",
-            "description": "Cytomine project id",
-            "type": "String",
+            "name": "cytomine_id_project",
             "optional": false,
-            "set-by-server": true
-        },
-        {
-            "id": "cytomine_id_software",
-            "value-key": "@ID",
-            "command-line-flag": "--@id",
-            "name": "Cytomine software id",
-            "description": "Cytomine software id",
-            "type": "String",
-            "optional": false,
-            "set-by-server": true
+            "set-by-server": true,
+            "type": "number",
+            "value-key": "[CYTOMINE_ID_PROJECT]"
         },
         {
             "id": "icy_scale3sensitivity",
-            "value-key": "@ID",
-            "command-line-flag": "--@id",
-            "name": "Scale 3 sensitivity",
-            "description": "Scale sensitivity",
-            "type": "Number",
+            "name": "icy_scale3sensitivity",
             "default-value": 40,
-            "optional": true
+            "optional": true,
+            "set-by-server": false,
+            "type": "number",
+            "value-key": "[ICY_SCALE3SENSITIVITY]",
+            "minimum": 1,
+            "maximum": 100
+        },
+        {
+            "id": "time",
+            "name": "time",
+            "default-value": "00:10:00",
+            "optional": false,
+            "set-by-server": false,
+            "type": "date",
+            "minimum": "00:05:00",
+            "maximum": "00:15:00"
         }
-    ]
+    ],
+    "invocation-schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "additionalProperties": false,
+        "dependencies": {},
+        "description": "Invocation schema for cytomine-template.",
+        "properties": {
+            "cytomine_host": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "cytomine_host"
+        ],
+        "title": "Cytomine-template.invocationSchema",
+        "type": "object"
+    },
+    "name": "SpotDetection-Icy",
+    "schema-version": "0.5",
+    "tool-version": "1.0"
 }
