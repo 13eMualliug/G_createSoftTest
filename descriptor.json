@@ -1,7 +1,7 @@
 {
-    "name": "SpotDetection-IcyTEST22",
+    "name": "g_createsofttest",
     "container-image": {
-        "image": "urubens/w_spotdetection-icy",
+        "image": "13emualliug/g_createsofttest",
         "type": "singularity"
     },
     "ram-needed":{

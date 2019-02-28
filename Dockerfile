@@ -1,6 +1,3 @@
-FROM neubiaswg5/icy-base:latest
-
-ADD protocol.protocol /icy/protocols/protocol.protocol
-ADD wrapper.py /app/wrapper.py
+FROM 13emualliug/g_createsofttest:latest
 
 ENTRYPOINT ["python", "/app/wrapper.py"]
