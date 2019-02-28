@@ -1,8 +1,8 @@
 {
-    "name": "g_createsofttest",
-    "container-image": {
-        "image": "13emualliug/g_createsofttest",
-        "type": "singularity"
+  "name": "g_createsofttest",
+  "container-image": {
+    "image": "13emualliug/g_createsofttest",
+    "type": "singularity"
     },
     "ram-needed":{
     "numberInMB":500
