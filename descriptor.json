@@ -1,5 +1,5 @@
 {
-    "name": "SpotDetection-Icy",
+    "name": "SpotDetection-IcyTEST2",
     "container-image": {
         "image": "urubens/w_spotdetection-icy",
         "type": "singularity"
@@ -8,7 +8,7 @@
     "numberInMB":500
     },
     "schema-version": "cytomine-0.1",
-    "description": "Neubias-WG5 workflow for SpotDetection using Icy",
+    "description": "Neubias-WG5",
     "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE ICY_SCALE3SENSITIVITY",
     "inputs": [
         {
