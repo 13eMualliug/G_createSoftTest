@@ -1,5 +1,5 @@
 {
-    "name": "SpotDetection-IcyTEST2",
+    "name": "SpotDetection-IcyTEST22",
     "container-image": {
         "image": "urubens/w_spotdetection-icy",
         "type": "singularity"
