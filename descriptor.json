@@ -2,10 +2,8 @@
   "name": "g_createsofttest",
   "container-image": {
     "image": "13emualliug/g_createsofttest",
+    "index": "docker://",
     "type": "singularity"
-    },
-    "ram-needed":{
-    "numberInMB":500
     },
     "schema-version": "cytomine-0.1",
     "description": "Neubias-WG5",
